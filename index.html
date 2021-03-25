@@ -14,27 +14,112 @@
     <link rel="stylesheet" href="game.css">
     <title>Slap Game</title>
 </head>
+<!-------------------------------------------------------------------------------------->
 
 <body>
+    <!--HEADER-->
     <header>
-        <div class="row">
-            <h1>TITLE OF GAME</h1>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col primary-b text-center text-white shadow py-4">
+                    <h1>WIZARD SLAPS DRAGON</h1>
+                    <span>turbo edition</span>
+                </div>
+            </div>
         </div>
     </header>
-    <main>
-        <div class="row">
-            <div class="col">
-                <img src="placeholder 200pxX200px" alt="">
+
+
+
+
+
+    <!--MAIN CONTENT-->
+    <main class="bg-white pt-5">
+        <div class="container-fluid">
+
+            <!--ARENA-->
+            <div class="row d-flex align-items-center">
+
+                <!--WIZARD-->
+                <div class="col d-flex flex-column align-items-center">
+                    <div class="card shadow placehold2">
+                        <img src="./assets/wizard-frame-1.png">
+                    </div>
+                    <div>
+                        <span>HP:</span><span id="humanHealth"> 100</span>
+                    </div>
+                </div>
+
+                <!-- SPELL
+                <div class="col d-flex justify-content-center">
+                    <div class="card shadow bg-white placehold1">
+
+                    </div>
+                </div> -->
+
+                <!--DRAGON-->
+                <div class="col d-flex flex-column align-items-center">
+                    <!--DRAGON IMAGE-->
+                    <div class="card shadow placehold2">
+                        <img src="./assets/dragon-frame-1.png">
+                    </div>
+                    <!--DRAGON HEALTH-->
+                    <div>
+                        <span><strong>HP:</span><span id="bossHealth"> 100</strong></span>
+                        <span>A:</span><span id="bossArmor"> 0</span>
+                    </div>
+                </div>
+
+
+
+
+
             </div>
-            <div class="col"></div>
-        </div>
-        <div class="row">
-            <div class="col"></div>
-            <div class="col"></div>
+
+
+
+
+            <!--ATTACKS-->
+            <div class="row p-4">
+                <div class="col d-flex flex-column align-items-center">
+                    <button onclick="slap('iceblast')">ICE BLAST</button>
+                    <button onclick="slap('fireball')">FIREBALL</button>
+                    <button onclick="slap('lightning')">LIGHTNING</button>
+                </div>
+                <div class="col d-flex flex-column align-items-center">
+                    <button onclick="armorDragon('scalearmor')">SCALE ARMOR</button>
+                    <button onclick="healDragon('bigheal')">BIG HEAL</button>
+                    <button onclick="slapDragon('killwizard')">KILL THE WIZARD</button>
+                </div>
+            </div>
+
+
+
+
+            <!--RESET BUTTON-->
+            <div class="row">
+                <div class="col" id="deado">
+                </div>
+            </div>
+
+
+
+
+
         </div>
     </main>
-    <footer>
 
+
+
+
+
+    <!--FOOTER-->
+    <footer>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col"></div>
+            </div>
+        </div>
     </footer>
 
 
@@ -42,7 +127,7 @@
 
 
 
-    <script src=game.js.></script>
+    <script src="game.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>
@@ -50,5 +135,6 @@
         integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
         crossorigin="anonymous"></script>
 </body>
+<!-------------------------------------------------------------------------------------->
 
 </html>
